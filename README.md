@@ -66,6 +66,8 @@ python main.py -dc config.yaml -ef experiments/sc > experiments/sc/log.out
 ---
 ## Citation
 If you use this code, please cite the preprint:
+
+```bibtex
 @article{galvezjimenez2024annotator,
   title={Annotator Reliability and Probabilistic Consensus for Semantic Segmentation in Digital Pathology},
   author={Galvez-Jimenez, Laura and ...},
@@ -73,3 +75,4 @@ If you use this code, please cite the preprint:
   year={2024},
   url={https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5271896}
 }
+```
