@@ -1,0 +1,59 @@
+data:
+  dataset_name: segmentation_tnbc
+  class_no: 5
+  class_names: ['background','gleason1', 'gleason3', 'gleason4','gleason5']
+  class_weights: [0., 1.,1.,1.,0.] 
+  ignore_last_class: 0 # index of class in gt to be deleted, else 'None'
+  path: '/datasets/Gleason19/patches'
+  
+  val:
+    class_no: 5
+    class_names: ['background','gleason1', 'gleason3', 'gleason4','gleason5']
+    class_weights: [0., 1., 1., 1.,0.] 
+    path: '/datasets/PANDA/patches/'
+    images: /datasets/Arvaniti/patches/imgs/validation
+    masks: /datasets/Arvaniti/patches/masks/validation  
+  test1:
+    class_no: 5
+    class_names: ['background','gleason1', 'gleason3', 'gleason4']
+    class_weights: [0., 1., 1., 1.] 
+    path: '/datasets/PANDA/patches/'
+    images: /datasets/Arvaniti/patches/imgs/test
+    masks: /datasets/Arvaniti/patches/masks/path1
+  test2:
+    class_no: 5
+    class_names: ['background','gleason1', 'gleason3', 'gleason4','gleason5']
+    class_weights: [0., 1., 1., 1.,0.] 
+    path: '/datasets/Arvaniti/patches'
+    images: /datasets/Arvaniti/patches/imgs/test
+    masks: /datasets/Arvaniti/patches/masks/path2
+  test:
+    path: '/datasets/Arvaniti/patches'
+    images: /datasets/Arvaniti/patches/imgs/test
+    masks: /datasets/Arvaniti/patches/masks/path1
+  visualize_images:
+    train:
+      - 'slide001_core003_9.png'
+      - 'slide001_core003_10.png'
+      - 'slide001_core003_14.png'
+      - 'slide001_core003_21.png'
+    val:
+      - 'ZT76_39_A_1_1_10.png'
+      - 'ZT76_39_A_1_1_17.png'
+      - 'ZT76_39_A_1_6_15.png'
+    test:
+      - 'ZT80_38_A_1_1_15.png'
+      - 'ZT80_38_A_1_1_24.png'
+      - 'ZT80_38_A_1_1_32.png'
+
+  normalization: False
+  augmentation:
+    use_augmentation: True # switch everything off and on, if True automatically flips and 90 degree rotations are used in this case
+    gaussian_blur_kernel: 2 # range 3-7
+    brightness_limit: 0.1
+    contrast_limit: 0.1
+    hue_shift_limit: 10
+    sat_shift_limit: 10
+
+
+

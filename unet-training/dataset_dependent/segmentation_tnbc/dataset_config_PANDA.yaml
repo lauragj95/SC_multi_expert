@@ -1,0 +1,35 @@
+data:
+  dataset_name: segmentation_tnbc
+  class_no: 6
+  class_names: ['background','gleason1', 'gleason2', 'gleason3', 'gleason4','gleason5']
+  class_weights: [0.1,0.128,0.9773,0.9796,0.9234,0] 
+  ignore_last_class: 0 # index of class in gt to be deleted, else 'None'
+  path: '/datasets/PANDA/patches/'
+  
+  visualize_images:
+    train:
+      - 'fdb9d38ce2b5a1d31bb030cd2d3a03b9_0_17.png'
+      - 'c0a0956a39319920d02c5c4eb30c5e10_2_5.png'
+      - '2f27c52c7d58fbe0818d6531d3707c78_1_4.png'
+
+    val:
+      - 'b87d20bcf0c7492853ca6cd000e39666_0_9.png'
+      - '75423e7c7aec5ed80bc70b62e9ff62c0_1_4.png'
+      - '6109a474ebb5c73ef1dc5fe36c6f7df2_3_20.png'
+
+    test:
+      - '1e23449104568325e9c5a032351dfdc6_2_38.png'
+      - '687caedb62d68fd4692af68d695efc1c_0_44.png'
+      - 'a17e3c28db1efe5c03c927e64399f6aa_4_26.png'
+
+  normalization: False
+  augmentation:
+    use_augmentation: True # switch everything off and on, if True automatically flips and 90 degree rotations are used in this case
+    gaussian_blur_kernel: 5 # range 3-7
+    brightness_limit: 0.2
+    contrast_limit: 0.2
+    hue_shift_limit: 20
+    sat_shift_limit: 30
+
+
+

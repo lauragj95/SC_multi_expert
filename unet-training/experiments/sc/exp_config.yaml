@@ -1,0 +1,10 @@
+data:
+  crowd: False
+  prob: True
+  dataset: breast
+  train:
+    images: patches/Train
+    masks: 'masks/Train/sc_v2'
+model:
+  loss: ce
+  seed: 123

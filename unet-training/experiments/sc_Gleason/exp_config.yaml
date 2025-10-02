@@ -1,0 +1,11 @@
+data:
+  crowd: False
+  prob: True
+  dataset: gleason19
+  exp: sc
+  train:
+    images: patches/imgs
+    masks: 'patches/masks/sc'
+model:
+  loss: ce
+  seed: 123

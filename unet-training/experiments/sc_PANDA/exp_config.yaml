@@ -1,0 +1,11 @@
+data:
+  crowd: False
+  prob: True
+  panda: True
+  exp: sc
+  train:
+    images: imgs
+    masks: 'masks/sc_v2'
+model:
+  loss: ce
+  seed: 456
